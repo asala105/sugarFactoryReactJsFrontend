@@ -1,13 +1,160 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+
+.container-fluid {
+  font-family: "Karla", sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.brand-wrapper {
+  padding-top: 7px;
+  padding-bottom: 8px;
 }
+
+.brand-wrapper .logo {
+  height: 90px;
+  margin-left: 100px;
+}
+
+.login-section-wrapper {
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  padding: 68px 100px;
+  background-color: #f9dec9;
+}
+.form-group{
+  margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .login-section-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .login-section-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 100vh;
+  }
+}
+
+.login-wrapper {
+  width: 300px;
+  max-width: 100%;
+  /* padding-top: 24px; */
+  padding-bottom: 24px;
+  margin-left: 120px;
+}
+.login-wrapper input {
+  padding-top: 20px;
+}
+
+@media (max-width: 575px) {
+  .login-wrapper {
+    width: 100%;
+  }
+}
+
+.login-wrapper label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #8c0c33;
+}
+
+.login-wrapper .form-control {
+  border: none;
+  border-radius: 0;
+  padding: 9px 5px;
+  min-height: 40px;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #f9dec9;
+}
+
+.login-wrapper .form-control::-webkit-input-placeholder {
+  color: #b0adad;
+}
+
+.login-wrapper .form-control::-moz-placeholder {
+  color: #b0adad;
+}
+
+.login-wrapper .form-control:-ms-input-placeholder {
+  color: #b0adad;
+}
+
+.login-wrapper .form-control::-ms-input-placeholder {
+  color: #b0adad;
+}
+
+.login-wrapper .form-control::placeholder {
+  color: #b0adad;
+}
+
+.login-wrapper .login-btn {
+  padding: 13px 20px;
+  background-color: #8c0c33;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f9dec9;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.login-wrapper .login-btn:hover {
+ color: #f9dec9 ;
+}
+.login-wrapper .login-btn:active {
+  transform: translateY(4px);
+
+}
+
+.login-wrapper a.forgot-password-link {
+  color: #080808;
+  font-size: 14px;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 54px;
+}
+
+@media (max-width: 575px) {
+  .login-wrapper a.forgot-password-link {
+    margin-bottom: 16px;
+  }
+}
+
+.login-wrapper-footer-text {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.login-title {
+  font-size: 30px;
+  color: #8c0c33;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.login-img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: left;
+  object-position: left;
+}
+
+/*# sourceMappingURL=login.css.map */
+
+/* Dashboard Css */
+
+/* Googlefont Poppins CDN Link */
+
