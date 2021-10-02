@@ -152,9 +152,17 @@
   object-position: left;
 }
 
+
 /*# sourceMappingURL=login.css.map */
 
 /* Dashboard Css */
+.nav-bg{
+  background-color: #8c0c33;
+}
 
+.card-img{
+  max-width: 100%;
+  max-height: auto;
+}
 /* Googlefont Poppins CDN Link */
 
