@@ -1,24 +1,22 @@
-import { Table, Container, Button } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
+import Message from './Message';
 
 function MessagesList() {
     return (
-    <Table striped bordered hover>
-        <thead>
-            <tr>
-            <th>Message Body</th>
-            <th></th>
-            <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing ... see more (when the user clicks on see more the whole message is viewed)</td>
-            <td><Button variant="success">Approve</Button></td>
-            <td><Button variant="danger">Decline</Button></td>
-            </tr>
-
-        </tbody>
-    </Table>
+        <>
+        <Table striped bordered hover>
+            <thead>
+                <tr>
+                <th>Message Body</th>
+                <th></th>
+                <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <Message message="message body here "/>
+            </tbody>
+        </Table>
+        </>
     );
 }
 export default MessagesList
