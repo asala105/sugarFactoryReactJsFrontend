@@ -75,6 +75,11 @@
   font-size: 18px;
   font-weight: normal;
   background-color: #f9dec9;
+
+}
+#email:focus, #password:focus{
+  background-color: #f9dec9 !important ;
+  outline: none !important ;
 }
 
 .login-wrapper .form-control::-webkit-input-placeholder {
@@ -96,6 +101,7 @@
 .login-wrapper .form-control::placeholder {
   color: #b0adad;
 }
+
 
 .login-wrapper .login-btn {
   padding: 13px 20px;
