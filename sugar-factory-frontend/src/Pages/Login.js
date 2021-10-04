@@ -22,17 +22,15 @@ function Login() {
         }
         api.checkLogin(login, { headers: { 'Accept': "application/json", 'content-type': "application/json" } })
             .then(response => {
-                if (response.data.user.user_type_id == 1) {
+                if (response.data.user.user_type_id === 1) {
                     localStorage.setItem('access_token', response.data.access_token);
                     history.replace('/dashboard');
                     window.location.reload();
                 }
-                
-
             })
             .catch(error => {
                 console.log(error.response.data.errors);
-                if (email == '' || password == '') {
+                if (email === '' || password === '') {
                     setErrors(error.response.data.errors)
                 } else {
                     alert('incorrect username or password');

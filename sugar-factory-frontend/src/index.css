@@ -170,5 +170,8 @@
   max-width: 100%;
   max-height: auto;
 }
+Brand, .navbar-text {
+    color: green;
+}
 /* Googlefont Poppins CDN Link */
 

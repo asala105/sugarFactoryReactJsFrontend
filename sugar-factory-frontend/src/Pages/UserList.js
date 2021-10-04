@@ -1,32 +1,54 @@
-import { Table, Container, Button } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
+import {useState, useEffect} from 'react';
+import api from '../Service/api';
+import User from '../components/User';
 
 function UserList() {
+    const [fetchedUsers, setFetchedUsers] = useState('');
+
+
+    const allUsers = ()=>{
+        api.viewAllUsers()
+        .then(response => {
+            setFetchedUsers(response.data.users);
+        })
+        .catch(error => {
+            alert('incorrect username or password');
+        });
+    }
+    
+    useEffect(() => {
+        allUsers();
+    }, []);
+
     return (
-    <Table striped bordered hover>
+        <Container>
+    <Table hover>
         <thead>
             <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th></th>
+            <th>Full Name</th>
             <th>email</th>
             <th>Net worth</th>
-            <th></th>
-            <th></th>
+            <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <td>profile pic (small size with a circular border)</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>example@example.com</td>
-            <td>Net Worth + Currency</td>
-            <td><Button size="sm">Highlight</Button></td>
-            <td><Button size="sm">Remove Highlight</Button></td>
+        {fetchedUsers.length === 0? null : fetchedUsers.map(user =>
+            <tr key={user.id}>
+                <User
+                id = {user.id}
+                is_highlighted = {user.is_highlighted}
+                first_name = {user.first_name}
+                last_name = {user.last_name}
+                net_worth = {user.net_worth}
+                currency = {user.currency}
+                email = {user.email} />
             </tr>
-
+            )}
         </tbody>
     </Table>
+    </Container>
     );
 }
 export default UserList
