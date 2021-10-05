@@ -2,6 +2,8 @@ import { Table, Container } from 'react-bootstrap';
 import Message from '../components/Message';
 import {useState, useEffect} from 'react';
 import api from '../Service/api';
+import NavBar from '../components/NavBar';
+import classes from './MessagesList.module.css';
 
 function MessagesList() {
     const [fetchedMessages, setfetchedMessages] = useState('');
@@ -24,20 +26,20 @@ function MessagesList() {
         allMessages();
     }, []);
     return (
-        <Container>
-        <Table hover>
-            <thead>
-                <tr>
-                <th>Message Body</th>
-                <th></th>
-                <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {fetchedMessages.length === 0? null : fetchedMessages.map(message => <Message onRemove={function decline(){removeRow(message.id)}} key={message.id} id={message.id} message={message.body}/>)}
-            </tbody>
-        </Table>
-        </Container>
+        <><NavBar /><Container className={classes.container}>
+            <Table hover responsive>
+                <thead className="text">
+                    <tr>
+                        <th>Message Body</th>
+                        <th>Actions</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {fetchedMessages.length === 0 ? null : fetchedMessages.map(message => <Message onRemove={function decline() { removeRow(message.id); } } key={message.id} id={message.id} message={message.body} />)}
+                </tbody>
+            </Table>
+        </Container></>
     );
 }
 export default MessagesList

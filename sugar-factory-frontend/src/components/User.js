@@ -1,6 +1,7 @@
 import { Button, ButtonGroup } from 'react-bootstrap';
 import api from '../Service/api';
 import {useState} from 'react';
+import classes from './User.module.css';
 
 function User (props) {
         const [highlighted, setHighlighted] = useState(props.is_highlighted);
@@ -32,8 +33,8 @@ function User (props) {
         <td>{props.net_worth + ' ' + props.currency}</td>
         <td>
         <ButtonGroup size="sm">
-            <Button variant="outline-success" onClick={()=>{handleHighlight(props.id)}} size="sm" disabled={highlighted}>Highlight</Button>
-            <Button variant="outline-danger" onClick={()=>{handleRemoveHighlight(props.id)}} size="sm" disabled={!highlighted}>Remove Highlight</Button>
+            <Button variant="success" className={classes.button} onClick={()=>{handleHighlight(props.id)}} size="sm" disabled={highlighted}>Highlight</Button>
+            <Button variant="danger" className={classes.button} onClick={()=>{handleRemoveHighlight(props.id)}} size="sm" disabled={!highlighted}>Remove Highlight</Button>
         </ButtonGroup>
         </td>
     </>

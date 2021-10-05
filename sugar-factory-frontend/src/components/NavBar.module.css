@@ -1,0 +1,14 @@
+.navList {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #ffffff8c;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.navList:hover,
+.navList a:active,
+.navList a.active {
+  color: white;
+}
+

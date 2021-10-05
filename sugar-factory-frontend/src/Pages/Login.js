@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import img from "../images/couple2.png";
 import loglogin from "../images/Loglogin.png";
-import loginclass from '../Pages/Login.module.css';
+
 import api from '../Service/api';
 
 
@@ -24,7 +24,7 @@ function Login() {
             .then(response => {
                 if (response.data.user.user_type_id === 1) {
                     localStorage.setItem('access_token', response.data.access_token);
-                    history.replace('/dashboard');
+                    history.replace('/users');
                     window.location.reload();
                 }
             })

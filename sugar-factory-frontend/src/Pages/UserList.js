@@ -2,6 +2,7 @@ import { Container, Table } from 'react-bootstrap';
 import {useState, useEffect} from 'react';
 import api from '../Service/api';
 import User from '../components/User';
+import classes from './UserList.module.css';
 
 function UserList() {
     const [fetchedUsers, setFetchedUsers] = useState('');
@@ -22,11 +23,11 @@ function UserList() {
     }, []);
 
     return (
-        <Container>
-    <Table hover>
-        <thead>
+        <Container className={classes.container}>
+    <Table hover responsive>
+        <thead className="text">
             <tr>
-            <th></th>
+            <th>Profile Pic</th>
             <th>Full Name</th>
             <th>email</th>
             <th>Net worth</th>

@@ -1,6 +1,9 @@
 import {Route, Switch} from 'react-router-dom';
 import Dashboard from './Pages/Dashboard';
+import PicList from './Pages/PicList';
+import MessagesList from './Pages/MesagesList';
 import Login from './Pages/Login';
+
 
 function App() {
   return (
@@ -9,8 +12,14 @@ function App() {
         <Route path ='/' exact>
             <Login />
         </Route>
-        <Route path ='/dashboard' >
+        <Route path ='/users' >
           <Dashboard />
+        </Route>
+        <Route path ='/pictures' >
+          <PicList />
+        </Route>
+        <Route path ='/messages' >
+          <MessagesList />
         </Route>
       </Switch>
     </div>

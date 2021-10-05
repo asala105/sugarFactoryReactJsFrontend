@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-
-
-.container-fluid {
-  font-family: "Karla", sans-serif;
-  background-color: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+#root {
+  background-color: #f9dec9;
   min-height: 100vh;
 }
 
+.container-fluid {
+  font-family: "Karla", sans-serif;
+  background-color: f9dec9;
+  min-height: 100vh;
+}
 
 .brand-wrapper {
   padding-top: 7px;
@@ -15,7 +17,8 @@
 
 .brand-wrapper .logo {
   height: 90px;
-  margin-left: 100px;
+  margin-left: 10%;
+  margin-right: 15%;
 }
 
 .login-section-wrapper {
@@ -25,7 +28,7 @@
   padding: 68px 100px;
   background-color: #f9dec9;
 }
-.form-group{
+.form-group {
   margin-top: 20px;
 }
 
@@ -49,7 +52,8 @@
   max-width: 100%;
   /* padding-top: 24px; */
   padding-bottom: 24px;
-  margin-left: 120px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 .login-wrapper input {
   padding-top: 20px;
@@ -57,7 +61,7 @@
 
 @media (max-width: 575px) {
   .login-wrapper {
-    width: 100%;
+    width: 70%;
   }
 }
 
@@ -69,16 +73,16 @@
 
 .login-wrapper .form-control {
   border: none;
-  border-radius: 0;
+  border-radius: 3;
   padding: 9px 5px;
   min-height: 40px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
-  background-color: #f9dec9;
-
+  background-color: white;
 }
-#email:focus, #password:focus{
-  background-color: #f9dec9 !important ;
+#email:focus,
+#password:focus {
+  background-color: white !important ;
   outline: none !important ;
 }
 
@@ -102,24 +106,26 @@
   color: #b0adad;
 }
 
-
 .login-wrapper .login-btn {
-  padding: 13px 20px;
+  padding: 9px 5px;
   background-color: #8c0c33;
+  min-height: 40px;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #f9dec9;
   margin-bottom: 14px;
   width: 100%;
 }
+.text {
+  color: #8c0c33;
+}
 
 .login-wrapper .login-btn:hover {
- color: #f9dec9 ;
+  color: #f9dec9;
 }
 .login-wrapper .login-btn:active {
   transform: translateY(4px);
-
 }
 
 .login-wrapper a.forgot-password-link {
@@ -158,20 +164,20 @@
   object-position: left;
 }
 
-
 /*# sourceMappingURL=login.css.map */
 
 /* Dashboard Css */
-.nav-bg{
+.nav-bg {
   background-color: #8c0c33;
+  margin-bottom: 35px;
 }
 
-.card-img{
+.card-img {
   max-width: 100%;
   max-height: auto;
 }
-Brand, .navbar-text {
-    color: green;
+Brand,
+.navbar-text {
+  color: green;
 }
 /* Googlefont Poppins CDN Link */
-
