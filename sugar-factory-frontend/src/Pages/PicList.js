@@ -26,23 +26,27 @@ function PicList() {
   }, []);
 
   return (
-    <><NavBar /><Container>
-      <Row sm={1} md={3} className="g-3">
-        {fetchedPictures.length === 0
-          ? null
-          : fetchedPictures.map((pic) => (
-            <Col key={pic} id={pic.id}>
-              <PicComponent
-                onRemove={function decline() {
-                  removeRow(pic.id);
-                } }
-                id={pic.id}
-                image={pic.picture_url}
-                user="John Doe" />
-            </Col>
-          ))}
-      </Row>
-    </Container></>
+    <>
+      <NavBar />
+      <Container>
+        <Row sm={1} md={3} className="g-3">
+          {fetchedPictures.length === 0
+            ? null
+            : fetchedPictures.map((pic) => (
+                <Col key={pic} id={pic.id}>
+                  <PicComponent
+                    onRemove={function decline() {
+                      removeRow(pic.id);
+                    }}
+                    id={pic.id}
+                    image={pic.picture_url}
+                    user="John Doe"
+                  />
+                </Col>
+              ))}
+        </Row>
+      </Container>
+    </>
   );
 }
 export default PicList;

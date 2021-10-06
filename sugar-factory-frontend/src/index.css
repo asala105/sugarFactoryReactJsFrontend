@@ -2,6 +2,7 @@
 #root {
   background-color: #f9dec9;
   min-height: 100vh;
+  padding-bottom: 6%;
 }
 
 .container-fluid {
@@ -121,6 +122,10 @@
   color: #8c0c33;
 }
 
+.dashboard-logo {
+  width: 250px;
+}
+
 .login-wrapper .login-btn:hover {
   color: #f9dec9;
 }
@@ -168,7 +173,7 @@
 
 /* Dashboard Css */
 .nav-bg {
-  background-color: #8c0c33;
+  background-color: #940c34;
   margin-bottom: 35px;
 }
 
@@ -176,8 +181,3 @@
   max-width: 100%;
   max-height: auto;
 }
-Brand,
-.navbar-text {
-  color: green;
-}
-/* Googlefont Poppins CDN Link */

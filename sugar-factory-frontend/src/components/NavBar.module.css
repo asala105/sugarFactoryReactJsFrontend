@@ -1,9 +1,10 @@
 .navList {
   text-decoration: none;
   font-size: 1.1rem;
-  color: #ffffff8c;
+  color: #f9dec9;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
+  margin-right: 7%;
 }
 
 .navList:hover,
@@ -11,4 +12,3 @@
 .navList a.active {
   color: white;
 }
-
