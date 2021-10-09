@@ -40,7 +40,7 @@ function PicList() {
                     }}
                     id={pic.id}
                     image={pic.picture_url}
-                    user="John Doe"
+                    user="Nabiha Doe"
                   />
                 </Col>
               ))}
